@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avatar Creator Game</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fce4ec, #e8eaf6);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            color: #4a145c;
+        }
+        h1 {
+            color: #d81b60;
+            text-shadow: 2px 2px #ce93d8;
+        }
+        .box {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 450px;
+            margin: 20px auto;
+            box-shadow: 0 5px 20px rgba(183, 28, 198, 0.2);
+        }
+        select, input, button {
+            padding: 10px;
+            margin: 8px;
+            border-radius: 12px;
+            border: 2px solid #ce93d8;
+            font-size: 16px;
+        }
+        button {
+            background: linear-gradient(90deg, #f48fb1, #ce93d8);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8bbd0;
+            border-radius: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌸💜 AVATAR CREATOR 💜🌸</h1>
+    <p style="color:#7b1fa2;">Design your perfect avatar!</p>
+
+    <div class="box">
+        <p><b>Your Name:</b><br>
+        <input type="text" id="name" placeholder="Enter name..."></p>
+
+        <p><b>🎨 Hair Color:</b><br>
+        <select id="hair">
+            <option value="🩷 Light Pink">🩷 Light Pink</option>
+            <option value="💜 Light Purple">💜 Light Purple</option>
+            <option value="🤍 White">🤍 White</option>
+            <option value="💙 Light Blue">💙 Light Blue</option>
+            <option value="🌼 Soft Yellow">🌼 Soft Yellow</option>
+        </select></p>
+
+        <p><b>🎨 Outfit Color:</b><br>
+        <select id="dress">
+            <option value="🩷 Light Pink">🩷 Light Pink</option>
+            <option value="💜 Light Purple">💜 Light Purple</option>
+            <option value="🤍 White">🤍 White</option>
+            <option value="💙 Light Blue">💙 Light Blue</option>
+            <option value="🌼 Soft Yellow">🌼 Soft Yellow</option>
+        </select></p>
+
+        <p><b>🎨 Accessory Color:</b><br>
+        <select id="acc">
+            <option value="🩷 Light Pink">🩷 Light Pink</option>
+            <option value="💜 Light Purple">💜 Light Purple</option>
+            <option value="🤍 White">🤍 White</option>
+            <option value="💙 Light Blue">💙 Light Blue</option>
+            <option value="🌼 Soft Yellow">🌼 Soft Yellow</option>
+        </select></p>
+
+        <button onclick="showAvatar()">✨ CREATE MY AVATAR ✨</button>
+
+        <div id="result">
+            <h3>🩷💜 YOUR AVATAR 💜🩷</h3>
+            <p><b>Name:</b> <span id="r-name"></span></p>
+            <p><b>Hair:</b> <span id="r-hair"></span></p>
+            <p><b>Outfit:</b> <span id="r-dress"></span></p>
+            <p><b>Accessory:</b> <span id="r-acc"></span></p>
+            <h3>💖 YOU LOOK AMAZING! 💖</h3>
+        </div>
+    </div>
+
+    <script>
+        function showAvatar() {
+            const name = document.getElementById('name').value || "Mystery Avatar";
+            const hair = document.getElementById('hair').value;
+            const dress = document.getElementById('dress').value;
+            const acc = document.getElementById('acc').value;
+
+            document.getElementById('r-name').innerText = name;
+            document.getElementById('r-hair').innerText = hair;
+            document.getElementById('r-dress').innerText = dress;
+            document.getElementById('r-acc').innerText = acc;
+            document.getElementById('result').style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
